@@ -1,0 +1,25 @@
+.floating-label {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 4px;
+  background-color: white;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+/* When input is focused */
+.peer:focus + .floating-label {
+  top: 0;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #3b82f6;
+}
+
+/* When input has a value */
+.peer:not(:placeholder-shown) + .floating-label {
+  top: 0;
+  transform: translateY(-50%);
+  font-size: 12px;
+}

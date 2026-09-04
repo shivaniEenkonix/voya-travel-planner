@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #000733;
+
+  --font-sans: "Inter", sans-serif;
+
+  --text-nav-label: 8px;
+
+  --color-gradient-blue: #2196F3;
+  --color-gradient-purple: #982FC2;
+}
