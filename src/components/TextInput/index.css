@@ -14,7 +14,6 @@
   top: 0;
   transform: translateY(-50%);
   font-size: 12px;
-  color: #3b82f6;
 }
 
 /* When input has a value */
@@ -22,4 +21,48 @@
   top: 0;
   transform: translateY(-50%);
   font-size: 12px;
+}
+
+/* shake animation */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  20%,
+  60% {
+    transform: translateY(-5px);
+  }
+
+  40%,
+  80% {
+    transform: translateY(5px);
+  }
+}
+
+.shake {
+  animation: shake 0.4s ease-in-out;
+}
+@keyframes vibrate {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-2px);
+  }
+
+  50% {
+    transform: translateX(2px);
+  }
+
+  75% {
+    transform: translateX(-2px);
+  }
+}
+
+.vibrate {
+  animation: vibrate 0.25s ease-in-out 1;
 }
