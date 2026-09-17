@@ -10,3 +10,26 @@
   --color-gradient-blue: #2196F3;
   --color-gradient-purple: #982FC2;
 }
+
+
+.ticket-card-cutout {
+  /* Responsive radius */
+  --r: clamp(0.6rem, 1.5vw, 1rem); 
+  --offset: 20%; /* Distance from top/bottom edges */
+
+  background-color: #ffffff;
+
+  -webkit-mask-image: 
+    radial-gradient(circle var(--r) at 0 var(--offset), transparent 0, transparent 98%, #000 100.5%),
+    radial-gradient(circle var(--r) at 100% var(--offset), transparent 0, transparent 98%, #000 100.5%),
+    radial-gradient(circle var(--r) at 0 calc(100% - var(--offset)), transparent 0, transparent 98%, #000 100.5%),
+    radial-gradient(circle var(--r) at 100% calc(100% - var(--offset)), transparent 0, transparent 98%, #000 100.5%);
+  -webkit-mask-composite: destination-in;
+
+  mask-image: 
+    radial-gradient(circle var(--r) at 0 var(--offset), transparent 0, transparent 98%, #000 100.5%),
+    radial-gradient(circle var(--r) at 100% var(--offset), transparent 0, transparent 98%, #000 100.5%),
+    radial-gradient(circle var(--r) at 0 calc(100% - var(--offset)), transparent 0, transparent 98%, #000 100.5%),
+    radial-gradient(circle var(--r) at 100% calc(100% - var(--offset)), transparent 0, transparent 98%, #000 100.5%);
+  mask-composite: intersect;
+}
